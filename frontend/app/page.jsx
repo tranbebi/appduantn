@@ -14,7 +14,6 @@ import { postFoodOrder } from "@/redux/slice/foodorderSlice";
 
 export default function Home() {
   const boxes = document.querySelectorAll(".box");
-
   const options = {
     root: null,
     rootMargin: "0px",
