@@ -1,0 +1,77 @@
+/* Cấu trúc layout với Flexbox */
+.order-management-container {
+  display: flex; /* Sử dụng Flexbox để chia thành hai cột */
+  gap: 20px; /* Khoảng cách giữa hai cột */
+  margin-top: 20px;
+}
+
+.orders-list {
+  width: 60%; /* Chiếm 60% không gian */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-details {
+  width: 35%; /* Chiếm 35% không gian */
+  height: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the table and buttons */
+.table {
+  width: 100%;
+  background: white;
+  border-radius: 0.5rem;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  border: 1px solid #dddddd46;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #4d6950;
+  color: white;
+  font-size: 16px;
+}
+
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Buttons in Table */
+.editButton {
+  padding: 8px 15px;
+  background-color: #4d6950;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+.active>.page-link, .page-link.active{
+  background-color: #4d6950;
+  color: #fff;
+  border-color: unset;
+  
+
+}
+.page-link{
+  color: black;
+ 
+}

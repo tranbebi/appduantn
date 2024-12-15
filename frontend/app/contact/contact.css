@@ -1,0 +1,187 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .contact-banner {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0;
+
+    .card-img-overlay {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      border: none;
+    }
+
+    img {
+      height: 250px;
+      object-fit: fill;
+      border: none;
+    }
+  }
+
+  .contact-banner-bottom {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0;
+
+    .banner-bottom img {
+      height: 250px;
+      object-fit: fill;
+    }
+
+    .banner-bottom .card-img-overlay {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .getInTouch {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+
+    .from-getIntouch {
+      flex: 1;
+      margin-right: 20px;
+      background-color: #020817;
+      border: 1px solid rgb(209, 209, 209);
+      padding: 20px;
+      border-radius: 15px;
+      color: rgb(209, 209, 209);
+
+      .title-from {
+        margin-left: 24px;
+        color: #fff;
+
+        h3 {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+      }
+
+      form {
+        display: flex; /* Use flexbox for the form */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Align items to the start */
+        margin: 0;
+
+        label {
+          align-self: flex-start;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 24px;
+          font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          width: 90%;
+          padding: 10px;
+          margin-bottom: 10px;
+          background-color: #020817;
+          border: 1px solid #ccc;
+          border-radius: 15px;
+        }
+
+        textarea {
+          height: 150px;
+          margin-bottom: 30px;
+          color: #fff;
+          background-color: #020817;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: 2px solid #fff;
+          border-radius: 15px;
+          background: linear-gradient(to top right, #ffcccc 0%, #ff0000 100%);
+          width: 90%;
+          height: 40px;
+          color: white;
+          cursor: pointer;
+          transition: background 3s; 
+        }
+
+        button:hover {
+          background: linear-gradient(to bottom left, #ffcccc 0%, #ff0000 100%);
+        }
+        button:active{
+          background: #777777;
+        }
+      }
+    }
+
+    .contact-infor {
+      flex: 1; /* Allow this column to grow */
+      background-color: #1a1a1a34; /* White background for contrast */
+      padding: 20px; /* Padding for the info area */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+      .icon-infor {
+        display: grid; /* Enable grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+        gap: 10px; /* Space between grid items */
+
+        .icon {
+          font-weight: bold; /* Optional: make text bold */
+          text-align: center;
+          color: #fff;
+          height: 100px;
+        }
+      }
+    }
+
+    .map {
+      margin-top: 20px; /* Space above map */
+    }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 868px) {
+    .contact-banner {
+      height: 150px;
+      .card-img-overlay {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      img {
+        height: 150px; /* Adjusted height for smaller screens */
+      }
+    }
+
+    .contact-banner-bottom {
+      height: 150px;
+      .banner-bottom img {
+        height: 150px; /* Adjusted height for smaller screens */
+      }
+      .banner-bottom .card-img-overlay {
+        position: absolute;
+        top: 40px; /* Adjusted position for smaller screens */
+        left: 20px; /* Adjusted position for smaller screens */
+      }
+    }
+
+    .getInTouch {
+      flex-direction: column; /* Stack columns vertically */
+      .from-getIntouch {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px; /* Add margin below */
+      }
+    }
+
+    .contact-infor {
+      margin-bottom: 20px; /* Add margin below for spacing */
+    }
+  }
+}
