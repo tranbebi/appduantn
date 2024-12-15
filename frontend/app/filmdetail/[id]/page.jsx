@@ -75,12 +75,12 @@ export default function filmdetail({ params }) {
           seatModelRes,
           giagheRes,
         ] = await Promise.all([
-          fetch(`http://localhost:3000/phim/${id}`),
-          fetch(`http://localhost:3000/xuatchieu`),
-          fetch(`http://localhost:3000/phongchieu`),
-          fetch(`http://localhost:3000/ghe`),
-          fetch(`http://localhost:3000/loaighe`),
-          fetch(`http://localhost:3000/giaghe`),
+          fetch(`https://backend-duan-9qb7.onrender.com/phim/${id}`),
+          fetch(`https://backend-duan-9qb7.onrender.com/xuatchieu`),
+          fetch(`https://backend-duan-9qb7.onrender.com/phongchieu`),
+          fetch(`https://backend-duan-9qb7.onrender.com/ghe`),
+          fetch(`https://backend-duan-9qb7.onrender.com/loaighe`),
+          fetch(`https://backend-duan-9qb7.onrender.com/giaghe`),
         ]);
 
         if (!phimChitietRes.ok || !caChieuRes.ok || !phongchieuRes.ok || !seatRes.ok || !seatModelRes.ok || !giagheRes.ok) {
@@ -379,7 +379,7 @@ export default function filmdetail({ params }) {
   <div className="card ">
     <div className="img-container  position-relative">
       <img
-        src={`http://localhost:3000/img/phims/${phimChitiet.img}`}
+        src={`https://backend-duan-9qb7.onrender.com/img/phims/${phimChitiet.img}`}
         alt="Ảnh nền phim"
         className="film-img"
       />
@@ -388,7 +388,7 @@ export default function filmdetail({ params }) {
     <div className="card-body film-details">
       <div className="img-overlay ">
         <img
-          src={`http://localhost:3000/img/phims/${phimChitiet.img}`}
+          src={`https://backend-duan-9qb7.onrender.com/img/phims/${phimChitiet.img}`}
           alt="Ảnh chính phim"
           className="film-img-small"
         />

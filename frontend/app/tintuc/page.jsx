@@ -28,7 +28,7 @@ export default function Tintuc() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/tintuc");
+        const res = await fetch("https://backend-duan-9qb7.onrender.com/tintuc");
         if (!res.ok) {
           throw new Error(`Could not fetch data: ${res.status}`);
         }
@@ -53,7 +53,7 @@ export default function Tintuc() {
                 <div className="box hover:no-underline">
                   <div className="box_top">
                     <img
-                    src={`http://localhost:3000/img/tintuc/${item.image}`}
+                    src={`https://backend-duan-9qb7.onrender.com/img/tintuc/${item.image}`}
                       alt="Tin tức"
                       className="img-thumbnail w-100 max--height "
                     />

@@ -8,7 +8,7 @@ export async function middleware(request) {
   }
 
   // Gọi đến API xác thực token
-  const res = await fetch("http://localhost:3000/checktoken", {
+  const res = await fetch("https://backend-duan-9qb7.onrender.com/checktoken", {
     headers: {
       Authorization: `Bearer ${token.value}`,
     },

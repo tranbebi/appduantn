@@ -44,7 +44,7 @@ const UserProfile = () => {
 
       try {
         const response = await axios.put(
-          `http://localhost:3000/taikhoan/${id}`,
+          `https://backend-duan-9qb7.onrender.com/taikhoan/${id}`,
           values
         );
         setUserData(response.data);
@@ -64,7 +64,7 @@ const UserProfile = () => {
       if (id) {
         try {
           const response = await axios.get(
-            `http://localhost:3000/taikhoan/${id}`
+            `https://backend-duan-9qb7.onrender.com/taikhoan/${id}`
           );
           setUserData(response.data);
           localStorage.setItem("userData", JSON.stringify(response.data));

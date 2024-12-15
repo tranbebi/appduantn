@@ -5,7 +5,7 @@ export const postHoadon = createAsyncThunk(
     'hoadon/postHoadon',
     async (hoadon, { rejectWithValue }) => {
         try {
-            const response = await fetch('http://localhost:3000/hoadon/add', {
+            const response = await fetch('https://backend-duan-9qb7.onrender.com/hoadon/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const getHoadon = createAsyncThunk(
     'hoadon/getHoadon',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await fetch('http://localhost:3000/hoadon');
+            const response = await fetch('https://backend-duan-9qb7.onrender.com/hoadon');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

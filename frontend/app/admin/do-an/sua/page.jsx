@@ -32,7 +32,7 @@ const SuaDoAnPage = () => {
   useEffect(() => {
     const fetchFood = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/food/${foodId}`);
+        const response = await axios.get(`https://backend-duan-9qb7.onrender.com/food/${foodId}`);
         setFoodData(response.data);
       } catch (error) {
         console.error("Lỗi khi tải dữ liệu món ăn:", error);
@@ -76,7 +76,7 @@ const SuaDoAnPage = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:3000/food/update/${foodId}`,
+        `https://backend-duan-9qb7.onrender.com/food/update/${foodId}`,
         formData,
         {
           headers: {
@@ -180,7 +180,7 @@ const SuaDoAnPage = () => {
           <div className={styles.imageContainer}>
             {foodData.img && (
               <img
-                src={`http://localhost:3000/img/food/${foodData.img}`}
+                src={`https://backend-duan-9qb7.onrender.com/img/food/${foodData.img}`}
                 alt={foodData.tenfood}
                 className={styles.currentImage}
               />

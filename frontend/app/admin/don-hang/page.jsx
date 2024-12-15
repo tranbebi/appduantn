@@ -21,7 +21,7 @@ const OrderManagement = () => {
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:3000/hoadon");
+        const response = await axios.get("https://backend-duan-9qb7.onrender.com/hoadon");
         const data = response.data;
 
         // Sắp xếp đơn hàng theo ngày lập (mới nhất ở trên cùng)
@@ -56,7 +56,7 @@ const OrderManagement = () => {
   const handleViewOrder = async (id) => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:3000/hoadon/${id}`);
+      const response = await axios.get(`https://backend-duan-9qb7.onrender.com/hoadon/${id}`);
       const data = response.data;
       setSelectedOrder(data);
     } catch (err) {

@@ -18,7 +18,7 @@ const FoodList = () => {
   useEffect(() => {
     const fetchFoods = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/food'); 
+        const response = await axios.get('https://backend-duan-9qb7.onrender.com/food'); 
         const sortedFoods = response.data.sort((a, b) => {
           // Sorting by 'createdAt' (if it exists) or by '_id' (MongoDB IDs are generated in a time-order sequence)
           return new Date(b.createdAt || b._id) - new Date(a.createdAt || a._id);
@@ -47,7 +47,7 @@ const FoodList = () => {
 
     if (confirmed.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/food/delete/${id}`);
+        await axios.delete(`https://backend-duan-9qb7.onrender.com/food/delete/${id}`);
         setFoods(foods.filter(food => food._id !== id));
         setFilteredFoods(filteredFoods.filter(food => food._id !== id));
         Swal.fire('Xóa thành công!', 'Món ăn đã được xóa.', 'success');
@@ -103,7 +103,7 @@ const FoodList = () => {
                     <td>{food.tenfood}</td>
                     <td>
                       <img 
-                        src={`http://localhost:3000/img/food/${food.img}`} 
+                        src={`https://backend-duan-9qb7.onrender.com/img/food/${food.img}`} 
                         alt={food.tenfood} 
                         className={styles.foodImage} 
                       />

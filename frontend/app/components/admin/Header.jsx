@@ -22,7 +22,7 @@ const Header = () => {
         <h4 className="leftTitle">ACE ADMIN</h4>
       </div>
       <div className='qr-checkin'>
-        <Link href='/admin/QR'><img src="http://localhost:3000/img/qr.png" alt="" /></Link>
+        <Link href='/admin/QR'><img src="https://backend-duan-9qb7.onrender.com/img/qr.png" alt="" /></Link>
       </div>
       <div>
         {authen && user?.role === 'Admin' && (
