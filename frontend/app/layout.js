@@ -1,6 +1,7 @@
 "use client";
 import "./globals.css";
 import "../public/bootstrap/css/bootstrap.min.css";
+// import "../public/bootstrap/js/bootstrap.js";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { usePathname } from "next/navigation";
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             </Access>
           </AuthProvider>
         </Providers>
+        <script src="./bootstrap/js/bootstrap.js"></script>
       </body>
     </html>
   );
