@@ -1,7 +1,7 @@
 "use client";
+import { useEffect } from "react";
 import "./globals.css";
-import "../public/bootstrap/css/bootstrap.min.css";
-// import "../public/bootstrap/js/bootstrap.js";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { usePathname } from "next/navigation";
@@ -16,6 +16,11 @@ export default function RootLayout({ children }) {
     return !pathname.includes("thanhtoan/thanhcong") && !pathname.includes("admin");
   };
 
+  useEffect(() => {
+    // Load Bootstrap JS
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
+
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#050B17" }}>
@@ -28,7 +33,6 @@ export default function RootLayout({ children }) {
             </Access>
           </AuthProvider>
         </Providers>
-        <script src="./bootstrap/js/bootstrap.js"></script>
       </body>
     </html>
   );

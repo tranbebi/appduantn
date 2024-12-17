@@ -32,7 +32,7 @@ export default function ResetPassword() {
       // Kiểm tra dữ liệu đầu vào trước khi gửi request
       await validationSchema.validate({ password, confirmPassword });
 
-      const response = await axios.post(`https://backend-duan-9qb7.onrender.com/forgotpassword/reset-password/${userId}`, {
+      const response = await axios.post(`https://backend-duan-9qb7.onrender.com//forgotpassword/reset-password/${userId}`, {
         token,
         password,
         confirmPassword,

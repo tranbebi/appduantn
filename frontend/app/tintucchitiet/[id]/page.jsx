@@ -6,7 +6,7 @@ import useSWR from "swr";
 export default function Chitiettintuc({ params }) {
     const [isVisible, setIsVisible] = useState(false);
     const fetcher = (...args) => fetch(...args).then(res => res.json());
-    const { data: tintuc, error: errortintuc } = useSWR(`https://backend-duan-9qb7.onrender.com/tintuc/${params.id}`, fetcher);
+    const { data: tintuc, error: errortintuc } = useSWR(`https://backend-duan-9qb7.onrender.com//tintuc/${params.id}`, fetcher);
 
     useEffect(() => {
         setIsVisible(true);

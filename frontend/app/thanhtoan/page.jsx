@@ -48,7 +48,7 @@ export default function ThanhToan() {
       
       try {
         const Orcode = Math.floor(Math.random() *1000000);
-        const response = await fetch('https://backend-duan-9qb7.onrender.com/payos/create-payment-link', {
+        const response = await fetch('https://backend-duan-9qb7.onrender.com//payos/create-payment-link', {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",
@@ -139,7 +139,7 @@ export default function ThanhToan() {
           <div className="title-item">
             <h2 className="text-light">Phương thức thanh toán</h2>
           </div>
-          <div className="paymoment">
+          <div className="paymoment p-3">
             {['PayOS'].map((method) => (
               <div className="pay-account" key={method}>
                 <input

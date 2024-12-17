@@ -4,7 +4,7 @@ export const postFoodOrder = createAsyncThunk(
     'food/postfoodOrder',
     async (foodorderData, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://backend-duan-9qb7.onrender.com/foodorder/add', {
+            const response = await fetch('https://backend-duan-9qb7.onrender.com//foodorder/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

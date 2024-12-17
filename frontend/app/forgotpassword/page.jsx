@@ -23,7 +23,7 @@ export default function Forgotpassword() {
       // Kiểm tra email trước khi gửi yêu cầu
       await validationSchema.validate({ email });
 
-      const response = await axios.post("https://backend-duan-9qb7.onrender.com/forgotpassword/forgot-password", { email });
+      const response = await axios.post("https://backend-duan-9qb7.onrender.com//forgotpassword/forgot-password", { email });
       if (response.status === 200) {
         setEmail("");
 

@@ -12,7 +12,7 @@ export default function KhuyenMai() {
   useEffect(() => {
     const fetchPromotions = async () => {
       try {
-        const response = await axios.get('https://backend-duan-9qb7.onrender.com/tintuc');
+        const response = await axios.get('https://backend-duan-9qb7.onrender.com//tintuc');
         setPromotions(response.data);
       } catch (error) {
         console.error('Failed to fetch promotions:', error);
@@ -74,7 +74,7 @@ export default function KhuyenMai() {
                 <div className="card h-100 bg-dark text-light">
                   <Link href={`/khuyenmaict/${promotion._id}`}>
                     <img
-                      src={`https://backend-duan-9qb7.onrender.com/img/tintuc/${promotion.image}`}
+                      src={`https://backend-duan-9qb7.onrender.com//img/tintuc/${promotion.image}`}
                       className="card-img-top-1"
                       alt={promotion.title}
                     />
@@ -100,7 +100,7 @@ export default function KhuyenMai() {
                 <div className="card h-100 bg-dark text-light">
                   <Link href={`/khuyenmaict/${promotion._id}`}>
                     <img
-                      src={`https://backend-duan-9qb7.onrender.com/img/tintuc/${promotion.image}`}
+                      src={`https://backend-duan-9qb7.onrender.com//img/tintuc/${promotion.image}`}
                       className="card-img-top"
                       alt={promotion.title}
                     />
@@ -124,7 +124,7 @@ export default function KhuyenMai() {
             <div className="card mb-3 bg-dark text-light" key={promotion._id}>
               <Link href={`/khuyenmaict/${promotion._id}`}>
                 <img
-                  src={`https://backend-duan-9qb7.onrender.com/img/tintuc/${promotion.image}`}
+                  src={`https://backend-duan-9qb7.onrender.com//img/tintuc/${promotion.image}`}
                   className="card-img-top"
                   alt={promotion.title}
                 />

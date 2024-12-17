@@ -45,9 +45,9 @@ export default function Yourticket() {
             setLoading(true);
 
             const [cachieuResponse, phimResponse, phongchieuResponse] = await Promise.all([
-                fetch('https://backend-duan-9qb7.onrender.com/xuatchieu'),
-                fetch('https://backend-duan-9qb7.onrender.com/phim'),
-                fetch('https://backend-duan-9qb7.onrender.com/phongchieu'),
+                fetch('https://backend-duan-9qb7.onrender.com//xuatchieu'),
+                fetch('https://backend-duan-9qb7.onrender.com//phim'),
+                fetch('https://backend-duan-9qb7.onrender.com//phongchieu'),
             ]);
 
             if (!cachieuResponse.ok || !phimResponse.ok || !phongchieuResponse.ok) {
@@ -139,7 +139,7 @@ export default function Yourticket() {
             }
 
             const ghePromises = gheid.map(async (id) => {
-                const response = await fetch(`https://backend-duan-9qb7.onrender.com/ghe/${id}`);
+                const response = await fetch(`https://backend-duan-9qb7.onrender.com//ghe/${id}`);
                 if (!response.ok) throw new Error(`Không tìm thấy ghế với ID ${id}`);
                 return await response.json();
             });

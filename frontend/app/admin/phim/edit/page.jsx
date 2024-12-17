@@ -32,11 +32,11 @@ export default function EditMovie() {
     const fetchMovie = async () => {
       if (!id) return; // Check if id exists
       try {
-        const response = await axios.get(`https://backend-duan-9qb7.onrender.com/phim/${id}`);
+        const response = await axios.get(`https://backend-duan-9qb7.onrender.com//phim/${id}`);
         if (response.status === 200) {
           // Thiết lập URL ảnh mặc định
           const movieData = response.data;
-          movieData.img = `https://backend-duan-9qb7.onrender.com/img/phims/${movieData.img}`; // Thiết lập URL ảnh
+          movieData.img = `https://backend-duan-9qb7.onrender.com//img/phims/${movieData.img}`; // Thiết lập URL ảnh
           setMovie(movieData);
 
         } else {
@@ -83,7 +83,7 @@ export default function EditMovie() {
       console.log(key, value);
   }
     try {
-      const response = await axios.put(`https://backend-duan-9qb7.onrender.com/phim/${id}`, formData, {
+      const response = await axios.put(`https://backend-duan-9qb7.onrender.com//phim/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -244,8 +244,8 @@ export default function EditMovie() {
         value={movie.trangthai}
         onChange={handleInputChange}
       >
-        <option value="1">Không hoạt động</option>
-        <option value="0">Hoạt động</option>
+        <option value="1">Sắp Chiếu</option>
+        <option value="0">Đang Chiếu</option>
       </select>
     </div>
   </div>
