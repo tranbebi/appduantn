@@ -48,7 +48,7 @@ export default function ThanhToan() {
       
       try {
         const Orcode = Math.floor(Math.random() *1000000);
-        const response = await fetch('https://backend-duan-9qb7.onrender.com//payos/create-payment-link', {
+        const response = await fetch('https://backend-duan-9qb7.onrender.com/payos/create-payment-link', {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",

@@ -9,8 +9,8 @@ import "./lichchieu-responsive.css"; // CSS responsive
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function LichChieu() {
-  const { data: cachieu = [], error: cachieuError } = useSWR(`https://backend-duan-9qb7.onrender.com//xuatchieu`, fetcher);
-  const { data: response = [], error: responseError } = useSWR(`https://backend-duan-9qb7.onrender.com//phim`, fetcher);
+  const { data: cachieu = [], error: cachieuError } = useSWR(`https://backend-duan-9qb7.onrender.com/xuatchieu`, fetcher);
+  const { data: response = [], error: responseError } = useSWR(`https://backend-duan-9qb7.onrender.com/phim`, fetcher);
 
   if (cachieuError || responseError) {
     return <div>Error loading data. Please try again later.</div>;
@@ -77,7 +77,7 @@ export default function LichChieu() {
                   <div className="row g-0">
                     <div className="col-md-5">
                       <img
-                        src={`https://backend-duan-9qb7.onrender.com//img/phims/${phim.img}`}
+                        src={`https://backend-duan-9qb7.onrender.com/img/phims/${phim.img}`}
                         className="film-image img-fluid rounded-start"
                         style={{ minWidth: "230px", height: "300px" }}
                         alt={'phim moi'}

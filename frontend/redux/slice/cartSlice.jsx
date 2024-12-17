@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // Thực hiện fetch dữ liệu món ăn từ API
 export const fetchFood = createAsyncThunk("cart/fetchFood", async () => {
-    const res = await fetch('https://backend-duan-9qb7.onrender.com//food');
+    const res = await fetch('https://backend-duan-9qb7.onrender.com/food');
     const data = await res.json();
     if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);

@@ -15,7 +15,7 @@ const AddMovie = () => {
   useEffect(() => {
     const fetchGenres = async () => {
       try {
-        const response = await fetch('https://backend-duan-9qb7.onrender.com//theloai');
+        const response = await fetch('https://backend-duan-9qb7.onrender.com/theloai');
         if (response.ok) {
           const data = await response.json();
           setGenres(data);
@@ -51,7 +51,7 @@ const AddMovie = () => {
     formData.append('theloaiIds', JSON.stringify(selectedGenres)); // Append selected genres as JSON array
 
     try {
-      const response = await fetch('https://backend-duan-9qb7.onrender.com//phim/add', {
+      const response = await fetch('https://backend-duan-9qb7.onrender.com/phim/add', {
         method: 'POST',
         body: formData,
       });

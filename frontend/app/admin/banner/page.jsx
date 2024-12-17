@@ -8,7 +8,7 @@ import Link from "next/link";
 import Swal from 'sweetalert2';
 export default function Banner() {
     const fetcher = (...args) => fetch(...args).then(res => res.json());
-    const { data: banners, error: bannerError, mutate } = useSWR(`https://backend-duan-9qb7.onrender.com//banner`, fetcher);
+    const { data: banners, error: bannerError, mutate } = useSWR(`https://backend-duan-9qb7.onrender.com/banner`, fetcher);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -42,7 +42,7 @@ export default function Banner() {
         data.append('hidden', hidden);
 
         try {
-            const response = await fetch('https://backend-duan-9qb7.onrender.com//banner/add', {
+            const response = await fetch('https://backend-duan-9qb7.onrender.com/banner/add', {
                 method: 'POST',
                 body: data,
             });
@@ -62,7 +62,7 @@ export default function Banner() {
 
     const toggleHidden = async (id, currentStatus) => {
         try {
-            const response = await fetch(`https://backend-duan-9qb7.onrender.com//banner/update/${id}`, {
+            const response = await fetch(`https://backend-duan-9qb7.onrender.com/banner/update/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export default function Banner() {
     const deleteBanner = async (id) => {
         if (confirm("Bạn có chắc chắn muốn xóa banner này?")) {
             try {
-                const response = await fetch(`https://backend-duan-9qb7.onrender.com//banner/delete/${id}`, {
+                const response = await fetch(`https://backend-duan-9qb7.onrender.com/banner/delete/${id}`, {
                     method: 'DELETE',
                 });
                 if (response.ok) {
@@ -181,7 +181,7 @@ export default function Banner() {
                                     <td className="text-center">{item.name}</td>
                                     <td className="d-flex justify-content-center">
                                         <Image 
-                                            src={`https://backend-duan-9qb7.onrender.com//img/banner/${item.img}`}
+                                            src={`https://backend-duan-9qb7.onrender.com/img/banner/${item.img}`}
                                             alt={item.name}
                                             width={80}
                                             height={60}

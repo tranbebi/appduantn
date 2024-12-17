@@ -50,21 +50,21 @@ const ThongKePage = () => {
           Tongphim2
         ] = await Promise.all([
 
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/soluong/taikhoan"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/soluong/tintuc"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/soluong/food"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/soluong/phongchieu"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/don-trong-ngay"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/don-trong-thang"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/tong-tien-hoadon"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/taikhoan-moi-nhat"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/hoadon-moi-nhat"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/doanh-thu-theo-ngay"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/doanh-thu-theo-thang"),
-          fetch("https://backend-duan-9qb7.onrender.com//thongke/soluong/phim"),
-          fetch(`https://backend-duan-9qb7.onrender.com//thongke/soluong/phim/trangthai/0`),
-          fetch(`https://backend-duan-9qb7.onrender.com//thongke/soluong/phim/trangthai/1`),
-          fetch(`https://backend-duan-9qb7.onrender.com//thongke/soluong/phim/trangthai/2`),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/soluong/taikhoan"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/soluong/tintuc"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/soluong/food"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/soluong/phongchieu"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/don-trong-ngay"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/don-trong-thang"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/tong-tien-hoadon"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/taikhoan-moi-nhat"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/hoadon-moi-nhat"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/doanh-thu-theo-ngay"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/doanh-thu-theo-thang"),
+          fetch("https://backend-duan-9qb7.onrender.com/thongke/soluong/phim"),
+          fetch(`https://backend-duan-9qb7.onrender.com/thongke/soluong/phim/trangthai/0`),
+          fetch(`https://backend-duan-9qb7.onrender.com/thongke/soluong/phim/trangthai/1`),
+          fetch(`https://backend-duan-9qb7.onrender.com/thongke/soluong/phim/trangthai/2`),
         ]);
 
         setStats({

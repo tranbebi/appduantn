@@ -59,7 +59,7 @@ const UserProfile = () => {
         }
 
         const response = await axios.put(
-          `https://backend-duan-9qb7.onrender.com//taikhoan/${id}`,
+          `https://backend-duan-9qb7.onrender.com/taikhoan/${id}`,
           formData
         );
 
@@ -81,7 +81,7 @@ const UserProfile = () => {
         try {
           console.log("Fetching user data with ID:", id);
           const response = await axios.get(
-            `https://backend-duan-9qb7.onrender.com//taikhoan/${id}`
+            `https://backend-duan-9qb7.onrender.com/taikhoan/${id}`
           );
           console.log("Fetched user data:", response.data);
 

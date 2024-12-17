@@ -5,7 +5,7 @@ export const postTicket = createAsyncThunk(
     'ticket/add',
     async (ticketdata, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://backend-duan-9qb7.onrender.com//ve/add', {
+            const response = await fetch('https://backend-duan-9qb7.onrender.com/ve/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export const getVe = createAsyncThunk(
     'ticket/getVe',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://backend-duan-9qb7.onrender.com//ve');
+            const response = await fetch('https://backend-duan-9qb7.onrender.com/ve');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

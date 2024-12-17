@@ -23,7 +23,7 @@ export default function LoginModal({ show, handleClose }) {
     }),
     onSubmit: async (values, { setSubmitting, setFieldError }) => {
       try {
-        const res = await fetch("https://backend-duan-9qb7.onrender.com//login/login", {
+        const res = await fetch("https://backend-duan-9qb7.onrender.com/login/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -9,7 +9,7 @@ export default function Danhmuc() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://backend-duan-9qb7.onrender.com//theloai');
+                const response = await fetch('https://backend-duan-9qb7.onrender.com/theloai');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

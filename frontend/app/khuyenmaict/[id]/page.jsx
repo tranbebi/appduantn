@@ -13,7 +13,7 @@ export default function ChitietKhuyenMai() {
     if (id) {
       const fetchPromotionDetails = async () => {
         try {
-          const response = await axios.get(`https://backend-duan-9qb7.onrender.com//tintuc/${id}`);
+          const response = await axios.get(`https://backend-duan-9qb7.onrender.com/tintuc/${id}`);
           setPromotion(response.data);
         } catch (error) {
           console.error('Failed to fetch promotion details:', error);
@@ -37,7 +37,7 @@ export default function ChitietKhuyenMai() {
 
   const incrementViewCount = async () => {
     try {
-      await axios.put(`https://backend-duan-9qb7.onrender.com//tintuc/view/${id}`);
+      await axios.put(`https://backend-duan-9qb7.onrender.com/tintuc/view/${id}`);
       setViewIncremented(true); // Ensure view count only increments once per load
     } catch (error) {
       console.error('Failed to increment view count:', error);
@@ -52,7 +52,7 @@ export default function ChitietKhuyenMai() {
     <div className="container">
       <h2 className="text-center mb-4">{promotion.title}</h2>
       <img
-        src={`https://backend-duan-9qb7.onrender.com//img/tintuc/${promotion.image}`}
+        src={`https://backend-duan-9qb7.onrender.com/img/tintuc/${promotion.image}`}
         className="img-fluid mb-4"
         alt={promotion.title}
       />

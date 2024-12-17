@@ -41,7 +41,7 @@ export default function LoginModal({ show, handleClose }) {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "https://backend-duan-9qb7.onrender.com//register/add",
+          "https://backend-duan-9qb7.onrender.com/register/add",
           {
             tentaikhoan: values.tentaikhoan,
             gioitinh: values.gioitinh,

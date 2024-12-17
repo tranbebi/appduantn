@@ -19,7 +19,7 @@ export default function ThanhtoanQR() {
     const [isComplete, setIsComplete] = useState(false);
     const postInvoice = async (invoiceData) => {
         try {
-            const response = await fetch('https://backend-duan-9qb7.onrender.com//hoadon/add', {
+            const response = await fetch('https://backend-duan-9qb7.onrender.com/hoadon/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

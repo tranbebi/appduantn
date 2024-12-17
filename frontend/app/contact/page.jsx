@@ -32,7 +32,7 @@ const ContactPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://backend-duan-9qb7.onrender.com//lienhe/add",
+        "https://backend-duan-9qb7.onrender.com/lienhe/add",
         formData
       );
       if (response.status === 201) {

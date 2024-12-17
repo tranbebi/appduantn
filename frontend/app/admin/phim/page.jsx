@@ -19,7 +19,7 @@ const QuanLyPhimPage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch("https://backend-duan-9qb7.onrender.com//phim");
+        const response = await fetch("https://backend-duan-9qb7.onrender.com/phim");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -75,7 +75,7 @@ const QuanLyPhimPage = () => {
 
     if (result.isConfirmed) {
       try {
-        const response = await fetch(`https://backend-duan-9qb7.onrender.com//phim/${id}`, {
+        const response = await fetch(`https://backend-duan-9qb7.onrender.com/phim/${id}`, {
           method: "DELETE",
         });
         if (!response.ok) {
@@ -169,7 +169,7 @@ const QuanLyPhimPage = () => {
                   <td>
                     {movie.img && (
                       <img
-                        src={`https://backend-duan-9qb7.onrender.com//img/phims/${movie.img}`}
+                        src={`https://backend-duan-9qb7.onrender.com/img/phims/${movie.img}`}
                         alt={movie.tenphim}
                         className={styles.movieImage}
                       />
